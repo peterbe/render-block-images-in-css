@@ -1,0 +1,22 @@
+{
+  "name": "render-block-images-in-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -fr build && mkdir -p build && cp -r src/** build && cp node_modules/bootstrap/dist/css/bootstrap.min.css build/",
+    "inline": "node bin/inline.js build /render-block-images-in-css/",
+    "postprocess": "zopfli build/*.html && brotli build/*.html",
+    "serve": "serve -l 7777 build",
+    "deploy": "rsync -avzP --numeric-ids build/ django@68.183.151.74:django-peterbecom/peterbecom-static-content/render-block-images-in-css",
+    "fulldeploy": "yarn build && yarn inline && yarn postprocess && yarn deploy"
+  },
+  "dependencies": {
+    "bootstrap": "5.0.0-alpha1",
+    "cheerio": "1.0.0-rc.3",
+    "http-server": "0.12.3",
+    "mime-types": "2.1.27",
+    "minimalcss": "0.11.0",
+    "serve": "11.3.2"
+  }
+}

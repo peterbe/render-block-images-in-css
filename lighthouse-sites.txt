@@ -1,0 +1,2 @@
+https://www.peterbe.com/render-block-images-in-css/inlined.html
+https://www.peterbe.com/render-block-images-in-css/inlined-datauri.html

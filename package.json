@@ -15,6 +15,7 @@
     "bootstrap": "5.0.0-alpha1",
     "cheerio": "1.0.0-rc.3",
     "http-server": "0.12.3",
+    "lighthouse-batch": "6.0.0",
     "mime-types": "2.1.27",
     "minimalcss": "0.11.0",
     "serve": "11.3.2"
